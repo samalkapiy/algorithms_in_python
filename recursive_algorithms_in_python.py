@@ -23,9 +23,11 @@ print("Factorial of %d is:%d"%(num,facto))
 
 #2. Permutations
 
-def permute(string, pocket=" "):          
-    if len(string) == 0:
+def permute(string, pocket=" "):  
+    global count        
+    if len(string) == 0:            # another method: if string == "":
         print(pocket) 
+        count = count + 1
     else:
         for i in range((len(string))):
             letter = string[i]
@@ -33,6 +35,9 @@ def permute(string, pocket=" "):
             back = string[i+1:]
             together = front + back
             permute(together, letter + pocket )
-
+count = 0
 string = str(input("Insert the string for which you need to find the permutations:"))
 permute(string, " ")
+print("Number of permutations: %d"%count)
+
+
