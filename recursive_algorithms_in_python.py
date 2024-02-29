@@ -20,7 +20,7 @@ facto = factorial(num)
 
 print("Factorial of %d is:%d"%(num,facto))
 '''
-
+'''
 #2. Permutations
 
 def permute(string, pocket=" "):  
@@ -39,5 +39,34 @@ count = 0
 string = str(input("Insert the string for which you need to find the permutations:"))
 permute(string, " ")
 print("Number of permutations: %d"%count)
+'''
+
+#3. Fibonnaci sequence
+
+n = int(input("How many elements of the fibbonachi sequence do you want to print?:"))
+
+def fib(n):
+    if n == 1:
+        return 0
+    elif (n==2):
+        return 1
+    else:
+        return fib(n-1) + fib (n-2)
+
+#print(fib(n))
+
+
+seq=[]
+
+def fib_seq(n):
+    #seq = np.zeros(n)
+    for i in range(1,n+1):
+        result = fib(i)
+        print(result)
+        seq.append(result)
+    #print(fib(n))
+
+fib_seq(n)
+print(seq)
 
 
