@@ -43,8 +43,6 @@ print("Number of permutations: %d"%count)
 
 #3. Fibonnaci sequence
 
-n = int(input("How many elements of the fibbonachi sequence do you want to print?:"))
-
 def fib(n):
     if n == 1:
         return 0
@@ -55,7 +53,6 @@ def fib(n):
 
 #print(fib(n))
 
-
 seq=[]
 
 def fib_seq(n):
@@ -65,6 +62,8 @@ def fib_seq(n):
         print(result)
         seq.append(result)
     #print(fib(n))
+    
+n = int(input("How many elements of the fibbonachi sequence do you want to print?:"))
 
 fib_seq(n)
 print(seq)
